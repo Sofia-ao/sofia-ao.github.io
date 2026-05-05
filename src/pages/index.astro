@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Box from "../components/Box.astro";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+
+const SITE_NAME = "Sofia's Website";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout siteName={SITE_NAME}>
+	<Box>
+		<!--Add image on the side -->
+		<h1>Sofia Alfonso Ortega</h1>
+		<!--Add icons and links -->
+		<Button>sofiaalfonsoortega@gmail.com</Button>
+		<Button>GitHub</Button>
+		<Button>LinkedIn</Button>
+	</Box>
+	<Box
+		><h1>Languages</h1>
+		<!--Put these as the images/icons of the languages, or name + icon next to them -->
+		<ul>Python Java JavaScript C C# C++ HTML CSS Virtual Basic</ul>
+	</Box>
+	<br />
+	<Box> <h1>About Me</h1> </Box>
+	<Box><h1>Frameworks</h1></Box>
+	<br />
+	<Box><h1>Education</h1></Box>
 </Layout>
