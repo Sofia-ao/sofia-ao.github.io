@@ -1,0 +1,36 @@
+---
+import Button from "../components/Button.astro";
+import Avatar from "../assets/sakura.jpg";
+---
+
+<div class="contact">
+    <slot />
+</div>
+
+<!--Add image on the side -->
+
+<figure class="rounded-avatar">
+    <img
+        class="contact-avatar"
+        src="/sakura.jpg"
+        alt="Flower avatar"
+        loading="eager"
+        decoding="async"
+    />
+</figure>
+
+<h1>Sofia Alfonso Ortega</h1>
+<!--Add icons and links -->
+<Button>sofiaalfonsoortega@gmail.com</Button>
+<Button>GitHub</Button>
+<Button>LinkedIn</Button>
+
+<style>
+    .rounded-avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 1em;
+    }
+</style>

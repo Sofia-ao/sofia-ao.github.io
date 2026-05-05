@@ -1,22 +1,14 @@
 ---
 import Box from "../components/Box.astro";
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
+import Contact from "../components/Contact.astro";
 
 const SITE_NAME = "Sofia's Website";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout siteName={SITE_NAME}>
 	<Box>
-		<!--Add image on the side -->
-		<h1>Sofia Alfonso Ortega</h1>
-		<!--Add icons and links -->
-		<Button>sofiaalfonsoortega@gmail.com</Button>
-		<Button>GitHub</Button>
-		<Button>LinkedIn</Button>
+		<Contact />
 	</Box>
 	<Box
 		><h1>Languages</h1>
