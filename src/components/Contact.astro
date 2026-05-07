@@ -1,36 +1,68 @@
 ---
 import Button from "../components/Button.astro";
-import Avatar from "../assets/sakura.jpg";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="contact">
-    <slot />
+    <!--Add image on the side -->
+    <figure class="rounded-avatar">
+        <img
+            class="contact-avatar"
+            src="/sakura.jpg"
+            alt="Flower avatar"
+            loading="eager"
+            decoding="async"
+        />
+    </figure>
+    <div class="contact-links">
+        <h1>Sofia Alfonso Ortega</h1>
+        <!--Add icons and links -->
+        <Button>
+            <Icon name={"humbleicons:mail"} />
+            sofiaalfonsoortega@gmail.com
+        </Button>
+        <Button>
+            <Icon name={"humbleicons:brand-github"} />
+            GitHub
+        </Button>
+        <Button>
+            <Icon name={"mdi:linkedin"} />
+
+            LinkedIn
+        </Button>
+    </div>
 </div>
 
-<!--Add image on the side -->
-
-<figure class="rounded-avatar">
-    <img
-        class="contact-avatar"
-        src="/sakura.jpg"
-        alt="Flower avatar"
-        loading="eager"
-        decoding="async"
-    />
-</figure>
-
-<h1>Sofia Alfonso Ortega</h1>
-<!--Add icons and links -->
-<Button>sofiaalfonsoortega@gmail.com</Button>
-<Button>GitHub</Button>
-<Button>LinkedIn</Button>
-
 <style>
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 0.5em;
+    }
+
     .rounded-avatar {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         overflow: hidden;
         margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rounded-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    [data-icon] {
+        vertical-align: text-top;
+        margin-top: -0.1em;
+    }
+
+    .contact {
+        display: flex;
+        gap: 1em;
     }
 </style>

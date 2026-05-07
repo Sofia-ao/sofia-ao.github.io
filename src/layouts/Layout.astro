@@ -11,6 +11,12 @@ const { siteName } = Astro.props;
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{siteName}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chilanka:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<slot />
@@ -20,11 +26,11 @@ const { siteName } = Astro.props;
 <style>
 	html,
 	body {
+		font-family: "Chilanka", sans-serif;
 		margin: 0;
 		width: 100%;
 		height: 100%;
 		padding: 2em;
-		font-family: sans-serif;
-		background-color: #896790;
+		background-color: #dfbbda;
 	}
 </style>
