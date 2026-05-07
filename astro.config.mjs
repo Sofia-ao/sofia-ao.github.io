@@ -13,7 +13,9 @@ export default defineConfig({
         "clock",
         "location"],
       mdi: [
-        "linkedin",]
+        "linkedin"],
+      'skill-icons':
+        ["python-light", "java-light", "javascript", "c", "html", "css", "cs", "cpp"]
     }
   })]
 });

@@ -1,0 +1,36 @@
+{
+    "languages": [
+        {
+            "name": "Python",
+            "icon": "skill-icons:python-light"
+        },
+        {
+            "name": "Java",
+            "icon": "skill-icons:java-light"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "skill-icons:javascript"
+        },
+        {
+            "name": "C",
+            "icon": "skill-icons:c"
+        },
+        {
+            "name": "C#",
+            "icon": "skill-icons:cs"
+        },
+        {
+            "name": "C++",
+            "icon": "skill-icons:cpp"
+        },
+        {
+            "name": "HTML",
+            "icon": "skill-icons:html"
+        },
+        {
+            "name": "CSS",
+            "icon": "skill-icons:css"
+        }
+    ]
+}

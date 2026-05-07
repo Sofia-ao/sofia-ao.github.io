@@ -1,15 +1,36 @@
+---
+import { languages } from "../data/languages.json";
+import { Icon } from "astro-icon/components";
+
+interface Language {
+    name: string;
+    icon: string;
+}
+
+const languageList: Language[] = languages;
+---
+
 <div class="languages">
     <h1>Languages</h1>
     <!--Put these as the images/icons of the languages, or name + icon next to them -->
-    <ul>Python Java JavaScript C C# C++ HTML CSS Visual Basic</ul>
+    <div class="language-list">
+        {
+            languageList.map((language) => (
+                <li>
+                    <Icon name={language.icon} />
+                    {language.name}
+                </li>
+            ))
+        }
+    </div>
+
+    <style>
+        .languages {
+        }
+
+        h1 {
+            font-size: 25px;
+            margin-bottom: 0.5em;
+        }
+    </style>
 </div>
-
-<style>
-    .languages {
-    }
-
-    h1 {
-        font-size: 25px;
-        margin-bottom: 0.5em;
-    }
-</style>
