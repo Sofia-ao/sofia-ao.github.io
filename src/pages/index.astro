@@ -10,21 +10,40 @@ const SITE_NAME = "Sofia's Website";
 ---
 
 <Layout siteName={SITE_NAME}>
-	<div style="display: flex; flex-wrap: wrap; justify-content: left;">
-		<Box>
-			<Contact />
-		</Box>
-		<Box>
-			<AboutMe />
-		</Box>
+	<div class="container">
+		<div
+			style="display: flex; flex-wrap: wrap; justify-content: left; flex: 1;"
+		>
+			<Box>
+				<Contact />
+			</Box>
+			<Box>
+				<AboutMe />
+			</Box>
+		</div>
+		<div
+			style="display: flex; flex-wrap: wrap; justify-content: right; flex: 3;"
+		>
+			<Box>
+				<Languages />
+			</Box>
+			<Box><Frameworks /></Box>
+		</div>
 	</div>
-	<Box>
-		<Languages />
-	</Box>
-	<br />
-
-	<br />
-	<Box><Frameworks /></Box>
-	<br />
-	<Box><h1>Education</h1></Box>
 </Layout>
+
+<style>
+	.container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	@media (max-width: 768px) {
+		.container {
+			flex-direction: column;
+		}
+	}
+</style>
