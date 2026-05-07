@@ -9,7 +9,9 @@ export default defineConfig({
     include: {
       humbleicons: [
         "brand-github",
-        "mail",],
+        "mail",
+        "clock",
+        "location"],
       mdi: [
         "linkedin",]
     }

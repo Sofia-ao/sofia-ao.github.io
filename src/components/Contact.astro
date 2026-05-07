@@ -14,22 +14,31 @@ import { Icon } from "astro-icon/components";
             decoding="async"
         />
     </figure>
-    <div class="contact-links">
+    <div class="contact-name">
         <h1>Sofia Alfonso Ortega</h1>
         <!--Add icons and links -->
-        <Button>
-            <Icon name={"humbleicons:mail"} />
-            sofiaalfonsoortega@gmail.com
-        </Button>
-        <Button>
-            <Icon name={"humbleicons:brand-github"} />
-            GitHub
-        </Button>
-        <Button>
-            <Icon name={"mdi:linkedin"} />
-
-            LinkedIn
-        </Button>
+        <div class="contact-links">
+            <a href="mailto:sofiaalfonsoortega@gmail.com" target="_blank">
+                <Button>
+                    <Icon name={"humbleicons:mail"} />
+                    <p>sofiaalfonsoortega@gmail.com</p>
+                </Button>
+            </a>
+            <a href="https://github.com/sofia-ao">
+                <Button>
+                    <Icon name={"humbleicons:brand-github"} />
+                    <p>GitHub</p>
+                </Button>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/sofia-alfonso-ortega-757b68332/"
+            >
+                <Button>
+                    <Icon name={"mdi:linkedin"} />
+                    <p>LinkedIn</p>
+                </Button>
+            </a>
+        </div>
     </div>
 </div>
 
@@ -38,6 +47,15 @@ import { Icon } from "astro-icon/components";
         text-align: center;
         font-size: 30px;
         margin-bottom: 0.5em;
+    }
+    p {
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
     }
 
     .rounded-avatar {
@@ -59,9 +77,16 @@ import { Icon } from "astro-icon/components";
     [data-icon] {
         vertical-align: text-top;
         margin-top: -0.1em;
+        height: 25px;
+        width: 25px;
+        padding-right: 5px;
     }
 
     .contact {
+        display: flex;
+        gap: 1em;
+    }
+    .contact-links {
         display: flex;
         gap: 1em;
     }

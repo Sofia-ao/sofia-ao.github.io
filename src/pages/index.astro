@@ -2,6 +2,9 @@
 import Box from "../components/Box.astro";
 import Layout from "../layouts/Layout.astro";
 import Contact from "../components/Contact.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Languages from "../components/Languages.astro";
+import Frameworks from "../components/Frameworks.astro";
 
 const SITE_NAME = "Sofia's Website";
 ---
@@ -10,14 +13,15 @@ const SITE_NAME = "Sofia's Website";
 	<Box>
 		<Contact />
 	</Box>
-	<Box
-		><h1>Languages</h1>
-		<!--Put these as the images/icons of the languages, or name + icon next to them -->
-		<ul>Python Java JavaScript C C# C++ HTML CSS Virtual Basic</ul>
+	<Box>
+		<Languages />
 	</Box>
 	<br />
-	<Box> <h1>About Me</h1> </Box>
-	<Box><h1>Frameworks</h1></Box>
+	<Box>
+		<AboutMe />
+	</Box>
+	<br />
+	<Box><Frameworks /></Box>
 	<br />
 	<Box><h1>Education</h1></Box>
 </Layout>
