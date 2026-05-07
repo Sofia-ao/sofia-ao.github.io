@@ -34,7 +34,6 @@ import { Icon } from "astro-icon/components";
                 updateClock();
                 setInterval(updateClock, 1000);
             </script>
-
             <p>EST</p>
         </div>
     </div>
@@ -50,6 +49,8 @@ import { Icon } from "astro-icon/components";
         margin: 0;
         padding-top: 5px;
         padding-right: 8px;
+        flex-grow: 1;
+        text-align: right;
     }
 
     h1 {
@@ -71,10 +72,17 @@ import { Icon } from "astro-icon/components";
         padding-right: 5px;
     }
 
-    .location,
-    .time-zone {
+    .location {
         display: flex;
         width: fit-content;
+        padding: 0.6em;
+        border-radius: 0.5em;
+        border: 1px solid #bab4bb;
+    }
+
+    .time-zone {
+        display: flex;
+        width: 170px;
         padding: 0.6em;
         border-radius: 0.5em;
         border: 1px solid #bab4bb;
