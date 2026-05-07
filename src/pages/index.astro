@@ -10,16 +10,19 @@ const SITE_NAME = "Sofia's Website";
 ---
 
 <Layout siteName={SITE_NAME}>
-	<Box>
-		<Contact />
-	</Box>
+	<div style="display: flex; flex-wrap: wrap; justify-content: left;">
+		<Box>
+			<Contact />
+		</Box>
+		<Box>
+			<AboutMe />
+		</Box>
+	</div>
 	<Box>
 		<Languages />
 	</Box>
 	<br />
-	<Box>
-		<AboutMe />
-	</Box>
+
 	<br />
 	<Box><Frameworks /></Box>
 	<br />

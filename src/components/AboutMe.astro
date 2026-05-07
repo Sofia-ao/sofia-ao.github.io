@@ -5,10 +5,72 @@ import { Icon } from "astro-icon/components";
 
 <div class="about-me">
     <h1>About Me</h1>
-    <p>W.I.P</p>
+    <p>
+        W.I.P ---------------------------------------------------------
+        ----------------------------------------------
+        ---------------------------------------------------------------------
+    </p>
 
     <div class="about-me-info">
-        <Icon name={"humbleicons:location"} /> Ottawa, Ontario, Canada
-        <Icon name={"humbleicons:clock"} /> EST
+        <div class="location">
+            <Icon name={"humbleicons:location"} />
+            <p>Ottawa</p>
+        </div>
+        <br />
+        <div class="time-zone" onload="updateClock()">
+            <Icon name={"humbleicons:clock"} />
+            <div class="clock-time" id="clock-time"></div>
+
+            <script>
+                function updateClock() {
+                    const clockElement = document.getElementById("clock-time");
+                    if (clockElement) {
+                        const time = new Date();
+                        clockElement.textContent = time.toLocaleTimeString();
+                    }
+                    setTimeout(updateClock, 1000);
+                }
+
+                updateClock();
+                setInterval(updateClock, 1000);
+            </script>
+
+            <p>EST</p>
+        </div>
     </div>
 </div>
+
+<style>
+    p {
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    .clock-time {
+        margin: 0;
+        padding-top: 5px;
+        padding-right: 8px;
+    }
+
+    .about-me {
+    }
+
+    .about-me-info {
+    }
+
+    [data-icon] {
+        vertical-align: text-top;
+        margin-top: -0.1em;
+        height: 25px;
+        width: 25px;
+        padding-right: 5px;
+    }
+
+    .location,
+    .time-zone {
+        display: flex;
+        padding: 5px;
+        border-radius: 4%;
+        box-shadow: 1px 1px 1px 1px rgba(146, 119, 141, 0.43);
+    }
+</style>
