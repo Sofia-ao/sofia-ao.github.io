@@ -1,0 +1,12 @@
+{
+    "frameworks": [
+        {
+            "name": "Astro",
+            "icon": "devicon:astro"
+        },
+        {
+            "name": "Vue.js",
+            "icon": "devicon:vuejs"
+        }
+    ]
+}

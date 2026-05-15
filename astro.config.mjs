@@ -15,7 +15,10 @@ export default defineConfig({
       mdi: [
         "linkedin"],
       'skill-icons':
-        ["python-light", "java-light", "javascript", "c", "html", "css", "cs", "cpp"]
+        ["python-light", "java-light", "javascript", "c", "html", "css", "cs", "cpp"],
+      devicon: [
+        "vuejs",
+        "astro",]
     }
   })]
 });
